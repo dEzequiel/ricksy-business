@@ -5,9 +5,23 @@ public class CreditCard {
     private final String number;
     private double credit = 3000;
     // private final String SYMBOL;
-    
-    CreditCard(String owner, String number) {
+
+    public CreditCard(String owner, String number) {
         this.owner = owner;
         this.number = number;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder creditCardInfo = new StringBuilder();
+        creditCardInfo.append("Owner: ").append(this.owner).append("\n");
+        creditCardInfo.append("Number: ").append(this.number);
+        
+        return creditCardInfo.toString();
+    }
+
+    // public static void main(String [] args) {
+    //     CreditCard creditCard = new CreditCard("Abradolph Lincler", "1233545");
+    //     System.out.println(creditCard.toString());
+    // }
 }

@@ -61,7 +61,19 @@ public class UfosPark implements GuestDispatcher{
     
     
         }
+    
+    @Override
+    public String toString()  {
+        StringBuilder output = new StringBuilder();
 
+        output.append("[ ");
+        for(Map.Entry<String, String> entry : this.flota.entrySet()) {
+            output.append(entry.getKey()).append(",");}
+        output.append(" ]");
+
+
+        return output.toString();
+    }
 
 
     // public static void main(String [] args) {

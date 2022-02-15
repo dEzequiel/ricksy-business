@@ -1,5 +1,4 @@
 package edu.poniperro.ricksy.business;
-
 import java.util.ArrayList;
 import java.util.List;
 

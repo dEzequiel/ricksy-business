@@ -16,7 +16,11 @@ public class CreditCard {
             return true;
         } else {return false;}
     }
-    
+
+    double credit() {
+        return this.credit;
+    }
+
     @Override
     public String toString() {
         StringBuilder creditCardInfo = new StringBuilder();

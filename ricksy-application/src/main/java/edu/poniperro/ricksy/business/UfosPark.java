@@ -22,8 +22,33 @@ public class UfosPark implements GuestDispatcher{
         return this.fee;
     }
 
-    @Override
-    public void dispatch(CreditCard creditCard) {
-        creditCard.pay(this.fee);
+    // sacar ufo de
+    public String getUfoOf(String number) {
+
+        String ufoID = null;
+    
+        if (this.flota.containsValue(number)) {
+            for (Map.Entry<String, String> entry : this.flota.entrySet()) {
+                if (entry.getValue() == number) {
+                    ufoID = entry.getKey();
+                    break;
+                }
+            }
+        }
+        return ufoID;
     }
+
+
+
+    // public static void main(String [] args) {
+    //     UfosPark ufosPark = new UfosPark();
+        
+    //     String ufosID = "unx";
+    //     ufosPark.add(ufosID);
+    //     CreditCard abradolph = new CreditCard("Abradolph Lincler", "1233545");
+
+    //     ufosPark.dispatch(abradolph);
+    //     System.err.println(ufosPark);
+    //     System.out.println(ufosPark.getUfoOf(abradolph));
+    // }
 }

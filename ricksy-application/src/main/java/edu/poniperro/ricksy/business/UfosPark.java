@@ -23,7 +23,7 @@ public class UfosPark implements GuestDispatcher{
     }
 
     // sacar ufo de
-    String getUfoOf(String number) {
+    String getUfoOf(String creditCardNumber) {
 
         String ufoID = null;
     

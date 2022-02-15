@@ -4,12 +4,12 @@ public class CrystalExpender implements GuestDispatcher{
     private int stock;
     private double itemCost;
 
-    public CrystalExpender(int stock, double itemCost) {
+    CrystalExpender(int stock, double itemCost) {
         this.stock = stock;
         this.itemCost = itemCost;
     }
 
-    public int stock() {
+    int stock() {
         return this.stock;
     }
 

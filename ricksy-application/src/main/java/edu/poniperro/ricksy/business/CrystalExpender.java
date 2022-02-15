@@ -13,6 +13,15 @@ public class CrystalExpender implements GuestDispatcher{
         return this.stock;
     }
 
+    @Override
+    public void dispatch(CreditCard number) {
+
+        if (number.pay(itemCost)) {
+            this.stock -= 1;
+        }
+    }
+
+    @Override
     public String toString() {
         StringBuilder output = new StringBuilder();
         

@@ -53,13 +53,13 @@ public class UfosPark implements GuestDispatcher{
 
     // pago y reserva
     @Override
-    public void dispatch(CreditCard creditCard) {
+    public void dispatch(CreditCard creditCardNumber) {
 
         //create map entyr, key/value, to insert into flota
         Map.Entry<String, String> ufo = null;
 
         // if creditcard already have a ufo assigned, abort mission
-        if (!this.flota.containsValue(creditCard.number())) {
+        if (!containsCard(creditCardNumber.number())) {
             for(Map.Entry<String, String> entry : this.flota.entrySet()) {
                 if(entry.getValue() == null) {
                     ufo = entry;

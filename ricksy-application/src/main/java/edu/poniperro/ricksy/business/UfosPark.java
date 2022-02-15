@@ -7,23 +7,23 @@ public class UfosPark implements GuestDispatcher{
     private double fee = 500;
     private final Map<String, String> flota = new HashMap<String, String>();
     
-    public UfosPark(){};
+    UfosPark(){};
 
-    public void add(String ufo) {
+    void add(String ufo) {
         // Add key if the key si not present or aims to null.
         this.flota.putIfAbsent(ufo, null);
     }
 
-    public Map<String, String> getFlota() {
+    Map<String, String> getFlota() {
         return this.flota;
     }
 
-    public double getFee() {
+    double getFee() {
         return this.fee;
     }
 
     // sacar ufo de
-    public String getUfoOf(String number) {
+    String getUfoOf(String number) {
 
         String ufoID = null;
     

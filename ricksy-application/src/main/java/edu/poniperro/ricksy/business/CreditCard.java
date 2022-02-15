@@ -6,24 +6,28 @@ public class CreditCard {
     private double credit = 3000;
     // private final String SYMBOL;
 
-    public CreditCard(String owner, String number) {
+    CreditCard(String owner, String number) {
         this.owner = owner;
         this.number = number;
     }
 
-    public boolean pay(double price) {
+    boolean pay(double price) {
         if (price <= this.credit) {
             this.credit -= price;
             return true;
         } else {return false;}
     }
 
-    public double credit() {
+    double credit() {
         return this.credit;
     }
 
-    public String number() {
+    String number() {
         return this.number;
+    }
+
+    String cardOwner() {
+        return this.owner;
     }
 
     @Override

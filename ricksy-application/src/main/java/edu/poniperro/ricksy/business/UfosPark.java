@@ -38,6 +38,12 @@ public class UfosPark implements GuestDispatcher{
         return ufoID;
     }
 
+    boolean containsCard(String creditCardNumber) {
+        if(this.flota.containsValue(creditCardNumber)) {
+            return true;
+        } else {return false;}
+    }
+
         // pago y reserva
         @Override
         public void dispatch(CreditCard creditCard) {

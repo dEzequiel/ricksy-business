@@ -11,6 +11,12 @@ public class CreditCard {
         this.number = number;
     }
 
+    boolean pay(double price) {
+        if (this.credit > price) {
+            return true;
+        } else {return false;}
+    }
+    
     @Override
     public String toString() {
         StringBuilder creditCardInfo = new StringBuilder();

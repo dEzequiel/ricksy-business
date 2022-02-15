@@ -12,7 +12,8 @@ public class CreditCard {
     }
 
     boolean pay(double price) {
-        if (this.credit > price) {
+        if (price <= this.credit) {
+            this.credit -= price;
             return true;
         } else {return false;}
     }

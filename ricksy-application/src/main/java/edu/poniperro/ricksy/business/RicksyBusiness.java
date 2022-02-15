@@ -248,27 +248,27 @@ public class RicksyBusiness {
 
          // tu código aquí
 
-        // RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
+        RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
 
-        // receptivo.registra(MenuDispatcher);
+        receptivo.registra(MenuDispatcher);
 
-        // CreditCard[] cards = {abradolph, squanchy, morty, gearHead, birdpearson};
+        CreditCard[] cards = {abradolph, squanchy, morty, gearHead, birdpearson};
 
-        // for (CreditCard card: cards) {
-        //     receptivo.dispatch(card);
-        // }
+        for (CreditCard card: cards) {
+            receptivo.dispatch(card);
+        }
 
-        // System.out.println("\nPedidos de RickMenus:\n" + 
-        //                      "=====================");
-        // System.out.println(MenuDispatcher);
+        System.out.println("\nPedidos de RickMenus:\n" + 
+                             "=====================");
+        System.out.println(MenuDispatcher);
 
-        // System.out.println("\nCreditos de los invitados/as:\n" + 
-        //                      "=============================");
+        System.out.println("\nCreditos de los invitados/as:\n" + 
+                             "=============================");
 
-        // for (CreditCard card: cards) {
-        //     System.out.println(card);
-        //     System.out.println();
-        // }
+        for (CreditCard card: cards) {
+            System.out.println(card);
+            System.out.println();
+        }
     }
 
     private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {

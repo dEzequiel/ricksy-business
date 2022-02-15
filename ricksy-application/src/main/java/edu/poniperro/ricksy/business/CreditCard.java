@@ -33,8 +33,9 @@ public class CreditCard {
     @Override
     public String toString() {
         StringBuilder creditCardInfo = new StringBuilder();
-        creditCardInfo.append("Owner: ").append(this.owner).append("\n");
-        creditCardInfo.append("Number: ").append(this.number);
+        creditCardInfo.append("Owner: ").append(cardOwner()).append("\n");
+        creditCardInfo.append("Number: ").append(number()).append("\n");
+        creditCardInfo.append("Credit: ").append(credit());
         return creditCardInfo.toString();
     }
 }

@@ -27,9 +27,9 @@ public class UfosPark implements GuestDispatcher{
 
         String ufoID = null;
     
-        if (this.flota.containsValue(number)) {
+        if (containsCard(creditCardNumber)) {
             for (Map.Entry<String, String> entry : this.flota.entrySet()) {
-                if (entry.getValue() == number) {
+                if (entry.getValue() == creditCardNumber) {
                     ufoID = entry.getKey();
                     break;
                 }

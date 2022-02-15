@@ -11,15 +11,19 @@ public class CreditCard {
         this.number = number;
     }
 
-    boolean pay(double price) {
+    public boolean pay(double price) {
         if (price <= this.credit) {
             this.credit -= price;
             return true;
         } else {return false;}
     }
 
-    double credit() {
+    public double credit() {
         return this.credit;
+    }
+
+    public String number() {
+        return this.number;
     }
 
     @Override

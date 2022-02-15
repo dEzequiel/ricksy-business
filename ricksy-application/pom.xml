@@ -50,7 +50,7 @@
                   </executions>
                   <configuration>
                       <excludes>
-                          <exclude>**/App.class</exclude>
+                          <exclude>**/RicksyBusiness.class</exclude>
                       </excludes>
                   </configuration>
               </plugin>
@@ -84,7 +84,7 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <mainClass>edu.poniperro.App</mainClass>
+                <mainClass>edu.poniperro.ricksy.business.RicksyBusiness</mainClass>
               </manifest>
               <manifestEntries>
                 <url>${project.url}</url>

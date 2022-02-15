@@ -1,7 +1,5 @@
 package edu.poniperro.ricksy.business;
 import org.junit.Test;
-
-
 import static org.junit.Assert.*;
 
 public class CrystalExpenderTest {

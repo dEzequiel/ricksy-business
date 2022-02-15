@@ -31,12 +31,6 @@ public class CreditCard {
         StringBuilder creditCardInfo = new StringBuilder();
         creditCardInfo.append("Owner: ").append(this.owner).append("\n");
         creditCardInfo.append("Number: ").append(this.number);
-        
         return creditCardInfo.toString();
     }
-
-    // public static void main(String [] args) {
-    //     CreditCard creditCard = new CreditCard("Abradolph Lincler", "1233545");
-    //     System.out.println(creditCard.toString());
-    // }
 }

@@ -9,8 +9,13 @@ public class UfosPark implements GuestDispatcher{
 
     public UfosPark(){};
 
-    void add(String ufo) {
+    public void add(String ufo) {
+        // Add key if the key si not present or aims to null.
         this.flota.putIfAbsent(ufo, null);
+    }
+
+    public Map<String, String> getFlota() {
+        return this.flota;
     }
 
     @Override

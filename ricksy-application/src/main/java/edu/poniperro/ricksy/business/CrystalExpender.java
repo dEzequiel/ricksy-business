@@ -9,11 +9,15 @@ public class CrystalExpender implements GuestDispatcher{
         this.itemCost = itemCost;
     }
 
+    int stock() {
+        return this.stock;
+    }
+
     public String toString() {
         StringBuilder output = new StringBuilder();
         
         output.append("stock: ").append(stock()).append("\n");
-        output.append("cost: ").append(this.itemCost));
+        output.append("cost: ").append(this.itemCost);
 
         return output.toString();
 

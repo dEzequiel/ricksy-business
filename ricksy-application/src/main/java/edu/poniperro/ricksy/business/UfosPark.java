@@ -2,9 +2,7 @@ package edu.poniperro.ricksy.business;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 public class UfosPark implements GuestDispatcher{
     private double fee = 500;
@@ -53,23 +51,16 @@ public class UfosPark implements GuestDispatcher{
 
     // pago y reserva
     @Override
-    public void dispatch(CreditCard creditCardNumber) {
-
-        //create map entyr, key/value, to insert into flota
-        Map.Entry<String, String> ufo = null;
+    public void dispatch(CreditCard creditCard) {
 
         // if creditcard already have a ufo assigned, abort mission
-        if (!containsCard(creditCardNumber.number())) {
-            for(Map.Entry<String, String> entry : this.flota.entrySet()) {
-                if(entry.getValue() == null) {
-                    ufo = entry;
+        if (!containsCard(creditCard.number())) {
+            for(String key : this.flota.keySet()) {
+                if(flota.get(key) == null && creditCard.pay(this.fee)) {
+                    flota.replace(key, creditCard.number());
                     break;
                 }
             }
-        }
-
-        if (ufo != null && creditCard.pay(this.fee)) {
-            this.flota.put(ufo.getKey(), creditCard.number());
         }
 
 
@@ -87,17 +78,4 @@ public class UfosPark implements GuestDispatcher{
 
         return output.toString();
     }
-
-
-    // public static void main(String [] args) {
-    //     UfosPark ufosPark = new UfosPark();
-        
-    //     String ufosID = "unx";
-    //     ufosPark.add(ufosID);
-    //     CreditCard abradolph = new CreditCard("Abradolph Lincler", "1233545");
-
-    //     ufosPark.dispatch(abradolph);
-    //     System.err.println(ufosPark);
-    //     System.out.println(ufosPark.getUfoOf(abradolph));
-    // }
 }

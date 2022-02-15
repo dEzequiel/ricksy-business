@@ -7,7 +7,11 @@ public class UfosPark implements GuestDispatcher{
     private double fee;
     private final Map<String, String> flota = new HashMap<>();
 
-    UfosPark(){};
+    public UfosPark(){};
+
+    void add(String ufo) {
+        this.flota.putIfAbsent(ufo, null);
+    }
 
     @Override
     public void dispatch(CreditCard creditCard) {

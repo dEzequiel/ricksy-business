@@ -11,6 +11,9 @@ public class Receptivo {
         observers.add(observer);
     }
 
+    int getObservers() {
+        return this.observers.size();
+    }
 
     void dispatch(CreditCard number) {
         for(GuestDispatcher observer : observers) {

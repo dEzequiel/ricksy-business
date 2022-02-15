@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class UfosPark implements GuestDispatcher{
     private double fee;
-    private final Map<String, String> flota = new HashMap<>();
+    private final Map<String, String> flota = new HashMap<String, String>();
 
     public UfosPark(){};
 
